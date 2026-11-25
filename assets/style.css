@@ -1,0 +1,722 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --navy: #243b63;
+    --blue: #4779c8;
+    --blue2: #eaf2ff;
+    --text: #26364d;
+    --muted: #8290a5;
+    --line: #e9eef5;
+    --bg: #f5f8fc;
+    --white: #fff;
+}
+
+/* RESET DAN DASAR */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 245px;
+    background: #fff;
+    border-right: 1px solid var(--line);
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 900;
+    font-size: 19px;
+    letter-spacing: .4px;
+    padding: 0 8px;
+}
+
+.brand small {
+    display: block;
+    color: #9aa7b9;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .2px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    background: #e8f1ff;
+    color: #4779c8;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.nav-caption {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    color: #a4afbf;
+    margin: 42px 10px 12px;
+}
+
+.nav-menu {
+    display: grid;
+    gap: 7px;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #78879b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: #edf4ff;
+    color: #4779c8;
+}
+
+.nav-menu a:first-letter {
+    font-size: 18px;
+}
+
+.sidebar-note {
+    margin-top: auto;
+    background: #f4f8ff;
+    border: 1px solid #e8f0fc;
+    border-radius: 12px;
+    padding: 15px;
+    color: #8b9ab0;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.sidebar-note strong {
+    color: #4779c8;
+}
+
+/* KONTEN UTAMA */
+
+.main-content {
+    padding: 34px 40px 24px;
+    max-width: 1600px;
+    width: calc(100% - 245px);
+    margin: 0 auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+}
+
+.topbar h1 {
+    font-size: 27px;
+    margin: 3px 0 4px;
+    color: #243b63;
+}
+
+.eyebrow,
+.welcome-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    font-weight: 900;
+    color: #91a4c0;
+    margin: 0;
+}
+
+.muted {
+    color: var(--muted);
+    margin: 0;
+    font-size: 12px;
+}
+
+.admin-chip {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #66768d;
+    font-size: 12px;
+    font-weight: 800;
+    background: #fff;
+    padding: 8px 13px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background: #eaf2ff;
+    color: #4779c8;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+/* WELCOME CARD */
+
+.welcome-card {
+    background: linear-gradient(110deg, #31588f, #5d8ed2);
+    border-radius: 17px;
+    padding: 27px 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 28px;
+    min-height: 170px;
+}
+
+.welcome-label {
+    color: #d6e5fb;
+}
+
+.welcome-card h2 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 10px 0;
+}
+
+.welcome-card p:last-child {
+    color: #e0ebfa;
+    font-size: 12px;
+    margin: 0;
+}
+
+.welcome-art {
+    width: 100px;
+    height: 100px;
+    border: 15px solid rgba(255, 255, 255, .17);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 43px;
+    color: #fff;
+    margin-right: 35px;
+}
+
+/* JUDUL BAGIAN */
+
+.section-heading {
+    margin: 0 0 15px;
+}
+
+.section-heading h2,
+.panel h2,
+.form-panel h2 {
+    font-size: 16px;
+    color: #304765;
+    margin: 0 0 4px;
+}
+
+/* KARTU STATISTIK */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.stats-four {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.stat-card,
+.panel,
+.form-panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(45, 75, 115, .035);
+}
+
+.stat-card {
+    padding: 17px;
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #7c8ba0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stat-card > strong {
+    display: block;
+    font-size: 29px;
+    color: #2b4265;
+    margin: 12px 0 2px;
+}
+
+.stat-card small {
+    color: #a0adbd;
+    font-size: 10px;
+}
+
+.stat-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.blue {
+    background: #edf4ff;
+    color: #5485ce;
+}
+
+.green {
+    background: #e8f8f0;
+    color: #3eaa78;
+}
+
+.orange {
+    background: #fff3e5;
+    color: #dc984b;
+}
+
+.purple {
+    background: #f2edff;
+    color: #8d73ce;
+}
+
+.red {
+    background: #fff0ef;
+    color: #d97972;
+}
+
+/* PANEL DAN TABEL */
+
+.panel {
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th {
+    text-align: left;
+    color: #9aa7b8;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    font-weight: 900;
+    padding: 12px 13px;
+    background: #f8fafd;
+    border-bottom: 1px solid var(--line);
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #f0f3f7;
+    color: #68788e;
+    font-size: 12px;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.name-cell {
+    font-weight: 800;
+    color: #344b6c;
+}
+
+.empty {
+    text-align: center;
+    color: #9aa7b8;
+    padding: 28px !important;
+}
+
+/* STATUS KEHADIRAN */
+
+.status {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.status-hadir {
+    background: #e8f8f0;
+    color: #3e9f72;
+}
+
+.status-izin {
+    background: #fff4e5;
+    color: #cb8b3f;
+}
+
+.status-sakit {
+    background: #f1edff;
+    color: #866dc2;
+}
+
+.status-alpa {
+    background: #fff0ef;
+    color: #cf6f69;
+}
+
+/* TOMBOL */
+
+.btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font: 700 12px 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: #4779c8;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #3869b7;
+}
+
+.btn-light {
+    background: #edf4ff;
+    color: #4779c8;
+}
+
+.btn-plain {
+    background: transparent;
+    color: #8190a5;
+}
+
+.btn-danger {
+    background: #fff0ef;
+    color: #cc6d68;
+}
+
+.btn-small {
+    padding: 7px 10px;
+    font-size: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.actions form {
+    margin: 0;
+}
+
+/* FILTER DAN PENCARIAN */
+
+.filter-form {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 17px;
+    flex-wrap: wrap;
+}
+
+.filter-form input,
+.filter-form select {
+    max-width: 230px;
+}
+
+.filter-form input,
+.filter-form select,
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+    border: 1px solid #e3eaf2;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #fff;
+    color: #455873;
+    font: 500 12px 'Nunito Sans', sans-serif;
+    outline: none;
+}
+
+.filter-form input:focus,
+.filter-form select:focus,
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+    border-color: #83a9e2;
+    box-shadow: 0 0 0 3px #edf4ff;
+}
+
+/* FORMULIR */
+
+.form-panel {
+    padding: 24px;
+    max-width: 850px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-grid label {
+    display: grid;
+    gap: 8px;
+    font-size: 12px;
+    color: #536780;
+    font-weight: 800;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+    width: 100%;
+    font-size: 13px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 5px;
+}
+
+/* PESAN NOTIFIKASI */
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 9px;
+    margin-bottom: 17px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.alert.success {
+    background: #eaf8f0;
+    color: #368c65;
+}
+
+.alert.error {
+    background: #fff0ef;
+    color: #bf625d;
+}
+
+/* FOOTER */
+
+.footer {
+    color: #a7b2c0;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+/* PROGRESS BAR */
+
+.progress-row {
+    margin: 19px 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #66778e;
+}
+
+.progress-label strong {
+    color: #405674;
+}
+
+.progress-track {
+    height: 9px;
+    border-radius: 20px;
+    background: #f0f3f8;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: #6b94d0;
+}
+
+.fill-hadir {
+    background: #55b88a;
+}
+
+.fill-izin {
+    background: #e6ad63;
+}
+
+.fill-sakit {
+    background: #9b86d2;
+}
+
+.fill-alpa {
+    background: #dc827c;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1050px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-content {
+        padding: 28px 24px;
+        width: calc(100% - 220px);
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 720px) {
+
+    .app-layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        display: block;
+    }
+
+    .nav-caption,
+    .sidebar-note {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        overflow-x: auto;
+        margin-top: 14px;
+    }
+
+    .nav-menu a {
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 22px 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .admin-chip {
+        display: none;
+    }
+
+    .stats-grid,
+    .stats-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .welcome-card {
+        padding: 22px;
+    }
+
+    .welcome-art {
+        display: none;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width,
+    .form-actions {
+        grid-column: 1;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .filter-form input,
+    .filter-form select {
+        max-width: none;
+        width: 100%;
+    }
+}
